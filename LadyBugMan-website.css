@@ -1,0 +1,318 @@
+
+body {
+
+    /* Sets the Margin to this number instead of the default setting */
+    margin: 0;
+
+    /* Sets the background colour of the html page */
+    background-color: #202020;
+
+    /* Sets the font to this specified typed instead of the browsers default */
+    font-family: "Micro 5" , sans-serif;
+
+}
+
+/* Styling for the header section of the HTML */
+header {
+    height: auto; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: transparent; 
+}
+
+/* Styling for the main part of the HTML */
+main {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+}
+
+/* Creates a container so the text can be included in the same column as its button */
+.buttonContainer {
+    display: flex;
+
+    /* Makes the Button stack vertically in a column */
+    flex-direction: column;
+
+    /* Center Horizontally */
+    align-items: center;    
+}
+
+/* Label text styling */
+.buttonLabel {
+    /* Space between button and text */
+    margin-top: 0.5vw;
+
+    /* Min 12px, scales with viewport, max 18px */
+    font-size: clamp(12px, 1.2vw, 18px); 
+
+     /* Text color */
+    color: #ffffff;                
+
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+
+/* All the Social Media Buttons are contained in the same header with this class */
+.Social-Media{
+
+    /* Makes element into a flexible container - its children (flex items) to be arranged in a row/column with flexible sizing-scaling */
+    display: flex;
+
+    /* Centers Buttons Horizontally */
+    justify-content: center; 
+
+    /* Space Between Buttons using Viewport width to keep scale */
+    gap: 10vw;
+    
+    /* The inner spacing of the header pushing it away from other elements */
+    padding: 1vw;
+
+    /* Makes flex items move to a new line if they run out of space */
+    flex-wrap: wrap;
+}                                           
+                                           
+                                      
+                                           
+                                           
+                                           /* An example of a quick custom button CSS file */
+/*----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.gitHub_Profile {
+    /* Size of Image by its Viewport Width - Scaling*/
+    width:      10vw;
+    height:     10vw;
+    /* Smallest size in Pixels*/
+    min-width:  60px; 
+    min-height: 60px;
+
+    /* Largest size in Pixels*/
+    max-width:  160px; 
+    max-height: 160px;
+
+    
+    /* The Image being used for the custom button */
+    background-image: url('images/GitHub_Idle.png');
+
+    /* Makes the backgroiund image scale with the broswer window until it hits the limit - Aspect ration will be maintained */
+    background-size:contain;
+
+    /* Stops the image tiling all over the page/keeps it to a single image */
+    background-repeat: no-repeat;
+
+    /* Puts the image in the center of the element */
+    background-position: center;
+
+    /* Well, no border will be on this element */
+    border:none;
+
+    /* Removes all the space inside this element between its content and its border */
+    padding: 0;
+
+    /*Honestly not sure, has something to do with the images, I think it keeps this element in its own line and pushes everything else under it*/
+    display: block;
+
+    /* Changes the cursor icon to a pointer finger to indicate you are hovering over a button/interactive element */
+    cursor: pointer;
+
+    /* Makes the image sharper after its been scaled up */
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+}
+
+/* Hover fucntion */
+.gitHub_Profile:hover{
+    /* The image used when the cursor hovers over the custom button */
+    background-image: url('images/GitHub_Hover.png');
+}
+
+                    /* A Secondary Button Script that follows the firsts code near exaclty excluding the img referenced */
+.spotify_Profile {
+    
+    width:      10vw;
+    height:     10vw;
+    min-width:  60px; 
+    min-height: 60px;
+    max-width:  160px; 
+    max-height: 160px;
+
+    background-image: url('images/Spotify_Idle.png');
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border:none;
+    padding: 0;
+    display: block;
+    cursor: pointer;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    /* transition: background-image 0.15s ease-in-out; /* Smooth hover change */
+}
+
+.spotify_Profile:hover {
+    background-image: url('images/Spotify_Hover.png');
+}
+
+                                                /* A Third Button Script  */
+.instagram_Profile {
+    
+    width:      10vw; 
+    height:     10vw; 
+    min-width:  60px; 
+    min-height: 60px;
+    max-width:  160px; 
+    max-height: 160px;
+    background-image: url('images/Instagram_Idle.png');
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border:none;
+    padding: 0;
+    display: block;
+    cursor: pointer;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+}
+
+.instagram_Profile:hover {
+    background-image: url('images/Instagram_Hover.png');
+}
+
+                                                /* A Fourth Button Script */
+.youtube_Profile {
+    
+    width:      10vw; 
+    height:     10vw; 
+    min-width:  60px; 
+    min-height: 60px;
+    max-width:  160px; 
+    max-height: 160px;
+    background-image: url('images/Youtube_Idle.png');
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border:none;
+    padding: 0;
+    display: block;
+    cursor: pointer;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+}
+
+.youtube_Profile:hover {
+    background-image: url('images/Youtube_Hover.png');
+}
+
+                        /* Styling for the image used in the main part of the html - this was tricky for me to figure out */
+.retro-window {
+
+    background-image: url("images/Profile_WindowVer2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    
+    /* Size of the image in viewport width */
+    width: 80vw;      
+    
+    /* Keeps the image to scale */
+    aspect-ratio: 1 / 1;      
+    
+    /* Size of the image in pixels */
+    max-width: 1000px;         
+    max-height: 1000px;        
+
+    /* Makes this container a flexible box to easily align and arrange its children -- makes the content fit nicely */
+    display: flex;
+
+    /* The flexible box will stack the items vertically */
+    flex-direction: column;
+
+    /* Starts the items at the top of the column - cross axis (left-right in a column)*/
+    align-items: flex-start; 
+
+    /* Starts the items at the beginning of the main axis (top-bottom in a column) */
+    justify-content: flex-start;
+
+    /* Adjusts position of content in the frame so it sits nicely */
+    padding-top: 7%;   
+    padding-left: 2%;
+    padding-right: 4%;
+    padding-bottom: 9%;
+
+    /* Makes sure content doesn't get bigger then its set dimensions */
+    box-sizing: border-box;
+
+    /* Hides the content that does leave the box */
+    overflow: hidden;       
+   
+    
+}
+
+/* Ensures the content stays within a section of the image I made */
+.window-content {
+    width: 100%;
+
+    /* colour of text */
+    color:  black;
+
+    /* font of text used */
+    font-family: Arial, sans-serif;
+
+    /* keeps the text to the left of its margins */
+    text-align: left;
+
+    /* scrolls vertically and horizontally if content is too long/wide */
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+/* Make content row horizontal */
+.content-row {
+    display: flex;
+
+    /* horizontal layout */
+    flex-direction: row;     
+    
+    /* spacing between LadyBug avatar and text */
+    gap: 10px;   
+    
+    /* fill vertical space of window-content */
+    height: 100%;             
+}
+
+/* This is the styling for the ladyBug avatar in the content-row */
+.window-image {
+    width:      10vw; 
+    height:     10vw; 
+    min-width:  160px; 
+    min-height: 160px;
+    max-width:  160px; 
+    max-height: 160px;
+    object-fit: contain;      
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+}
+
+/* Styling the text to make sure it goes beside the ladyBug avatar in the content row */
+.text-column {
+
+    /* Take remaining horizontal space */
+    flex: 1;                  
+
+    display: flex;
+
+    /* Makes the text go vertical */
+    flex-direction: column;
+
+    /* Scroll vertically if content is long */
+    overflow-y: auto;         
+}
+
+
