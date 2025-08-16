@@ -8,7 +8,7 @@ body {
     background-color: #202020;
 
     /* Sets the font to this specified typed instead of the browsers default */
-    font-family: "Micro 5" , sans-serif;
+    font-family: Arial, sans-serif;
 
 }
 
@@ -150,7 +150,6 @@ main {
     cursor: pointer;
     image-rendering: crisp-edges;
     image-rendering: pixelated;
-    /* transition: background-image 0.15s ease-in-out; /* Smooth hover change */
 }
 
 .spotify_Profile:hover {
