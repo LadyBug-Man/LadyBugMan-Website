@@ -19,7 +19,9 @@ header {
     align-items: center;
     justify-content: center;
     color: white;
+    font-weight: bold;
     background-color: transparent; 
+
 }
 
 /* Styling for the main part of the HTML */
@@ -208,7 +210,7 @@ main {
 
                         /* Styling for the image used in the main part of the html - this was tricky for me to figure out */
 .retro-window {
-
+    
     background-image: url("images/Profile_WindowVer2.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -257,6 +259,7 @@ main {
 /* Ensures the content stays within a section of the image I made */
 .window-content {
     width: 100%;
+    max-height: 100%;
 
     /* colour of text */
     color:  black;
@@ -312,6 +315,36 @@ main {
 
     /* Scroll vertically if content is long */
     overflow-y: auto;         
+}
+
+        /*---- I'm not sure if this is the best way to do this, but until i find a more elegant solution this is what I'm running with ----*/
+/* Mobile device sizing -- more comments to come */
+@media (max-device-width: 767px) {
+    .retro-window {
+        background-image: url("images/Profile_Window_Mobile.png"); 
+        background-size: contain;       
+        background-position: center;
+        width: 100vw;                 
+        height: 100dvh;                
+        padding: 20% 9% 9% 9%;
+    }
+
+   .content-row {
+        flex-direction: column;
+        align-items: center; 
+    }
+}
+/* Tablet Device Sizing -- more comments to come */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .retro-window {
+        background-image: url("images/Profile_WindowVer2.png");
+        width: 95vw;
+        height: auto;
+        padding: 8% 6% 6% 6%;
+    }
+    .content-row {
+        flex-direction: row;
+    }
 }
 
 
