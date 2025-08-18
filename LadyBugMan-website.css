@@ -5,25 +5,27 @@ body {
     margin: 0;
 
     /* Sets the background colour of the html page */
-    background-color: #202020;
+    background-color: #f5f5f5;
 
     /* Sets the font to this specified typed instead of the browsers default */
     font-family: Arial, sans-serif;
 
     /* Custom cursor for website */
-   cursor: url("images/Cursor_Standard.png"), auto;
+    cursor: url("images/Cursor_Standard.png"), auto;
 
 }
 
 /* Styling for the header section of the HTML */
 header {
+    position: relative;
     height: auto; 
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: black;
     font-weight: bold;
     background-color: transparent; 
+    padding: 1vw;
 
 }
 
@@ -33,6 +35,14 @@ main {
     align-items: flex-start;
     justify-content: center;
 
+}
+
+/* Creates own container for theme switch as to not interefere with the social media buttons */
+.theme-container {
+    position:absolute;
+    left: 0;
+    top: 20%;
+    transform: translateY(-50%);
 }
 
 /* Creates a container so the text can be included in the same column as its button */
@@ -55,7 +65,7 @@ main {
     font-size: clamp(12px, 1.2vw, 18px); 
 
      /* Text color */
-    color: #ffffff;                
+    color: black;                
 
     text-align: center;
     font-family: Arial, sans-serif;
@@ -74,17 +84,81 @@ main {
     /* Space Between Buttons using Viewport width to keep scale */
     gap: 10vw;
     
-    /* The inner spacing of the header pushing it away from other elements */
-    padding: 1vw;
-
     /* Makes flex items move to a new line if they run out of space */
     flex-wrap: wrap;
 }                                           
                                            
-                                      
-                                           
-                                           
-                                           /* An example of a quick custom button CSS file */
+/* Dark/Light Mode Button --dark mode is the default setting */                   
+.theme-switch {
+    width: 5vw;
+    height: 5vw;
+    border:none;
+    background: url("images/Sun_Icon.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    cursor: url("images/Cursor_Pointer.png"), pointer;
+}                                  
+
+/* Light mode images -- yet to be determined */
+html[data-theme="dark"] .theme-switch{
+    background:url("images/Moon_Icon.png");
+    background-size: contain;
+}
+
+html[data-theme="dark"] body {
+    background-color: #202020;
+}
+
+html[data-theme="dark"] .buttonLabel {
+    color: white;
+}
+
+
+
+
+
+/* ---- For when I make Dark mode specific images ---
+html[data-theme="dark"] .gitHub_Profile {
+    background-image: url('images/GitHub_Idle.png');
+}
+html[data-theme="dark"] .gitHub_Profile:hover {
+    background-image: url('images/GitHub_Hover.png');
+}
+
+html[data-theme="dark"] .spotify_Profile {
+    background-image: url('images/Spotify_Idle.png');
+}
+html[data-theme="dark"] .spotify_Profile:hover {
+    background-image: url('images/Spotify_Hover.png');
+}
+
+html[data-theme="dark"] .instagram_Profile {
+    background-image: url('images/Instagram_Idle.png');
+}
+html[data-theme="dark"] .instagram_Profile:hover {
+    background-image: url('images/Instagram_Hover.png');
+}
+
+html[data-theme="dark"] .youtube_Profile {
+    background-image: url('images/Youtube_Idle.png');
+}
+html[data-theme="dark"] .youtube_Profile:hover {
+    background-image: url('images/Youtube_Hover.png');
+}
+
+html[data-theme="dark"] .retro-window {
+    background-image: url('images/Profile_WindowVer2.png');
+}
+*/
+
+
+
+
+
+
+                                                    /* Profile buttons section */
 /*----------------------------------------------------------------------------------------------------------------------------------------------*/
 
 .gitHub_Profile {
