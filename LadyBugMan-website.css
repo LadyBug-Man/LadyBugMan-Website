@@ -101,7 +101,7 @@ main {
     cursor: url("images/Cursor_Pointer.png"), pointer;
 }                                  
 
-/* Light mode images -- yet to be determined */
+/* Dark mode Settings */
 html[data-theme="dark"] .theme-switch{
     background:url("images/Moon_Icon.png");
     background-size: contain;
@@ -384,7 +384,27 @@ html[data-theme="dark"] .window-content{
     }
 
 }
-/* Tablet Device Sizing -- more comments to come */
+
+
+/* Dark mode for the mobile devices */
+@media (max-device-width: 767px) {
+    html[data-theme="dark"] .retro-window {
+        background-image: url("images/Profile_Window_Mobile_Dark.png"); /* dark mobile image */
+        background-size: contain;
+        background-position: center;
+        width: 100vw;
+        height: 100dvh;
+        padding: 20% 9% 9% 9%;
+    }
+
+    html[data-theme="dark"] .content-row {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+                                /* Tablet Device Sizing -- more comments to come */
 /* If the screen matches between these pixel sizes and is a vertical screen */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
     .retro-window {
