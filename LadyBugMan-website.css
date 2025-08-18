@@ -10,6 +10,9 @@ body {
     /* Sets the font to this specified typed instead of the browsers default */
     font-family: Arial, sans-serif;
 
+    /* Custom cursor for website */
+   cursor: url("images/Cursor_Standard.png"), auto;
+
 }
 
 /* Styling for the header section of the HTML */
@@ -118,8 +121,8 @@ main {
     /*Honestly not sure, has something to do with the images, I think it keeps this element in its own line and pushes everything else under it*/
     display: block;
 
-    /* Changes the cursor icon to a pointer finger to indicate you are hovering over a button/interactive element */
-    cursor: pointer;
+    /* Changes the cursor icon to a custom pointer finger to indicate you are hovering over a button/interactive element */
+    cursor: url("images/Cursor_Pointer.png"), auto;
 
     /* Makes the image sharper after its been scaled up */
     image-rendering: crisp-edges;
@@ -149,7 +152,7 @@ main {
     border:none;
     padding: 0;
     display: block;
-    cursor: pointer;
+    cursor: url("images/Cursor_Pointer.png"), auto;
     image-rendering: crisp-edges;
     image-rendering: pixelated;
 }
@@ -174,7 +177,7 @@ main {
     border:none;
     padding: 0;
     display: block;
-    cursor: pointer;
+    cursor: url("images/Cursor_Pointer.png"), auto;
     image-rendering: crisp-edges;
     image-rendering: pixelated;
 }
@@ -199,7 +202,7 @@ main {
     border:none;
     padding: 0;
     display: block;
-    cursor: pointer;
+    cursor: url("images/Cursor_Pointer.png"), auto;
     image-rendering: crisp-edges;
     image-rendering: pixelated;
 }
@@ -317,10 +320,12 @@ main {
     overflow-y: auto;         
 }
 
-        /*---- I'm not sure if this is the best way to do this, but until i find a more elegant solution this is what I'm running with ----*/
-/* Mobile device sizing -- more comments to come */
+       /*---- I'm not sure if this is the best way to do this, but until i find a more elegant solution this is what I'm running with ----*/
+
+    /* Mobile device sizing -- more comments to come */
 @media (max-device-width: 767px) {
     .retro-window {
+        /* When the size of the screen matches the pixels specified above it will switch to use this image and its settings */
         background-image: url("images/Profile_Window_Mobile.png"); 
         background-size: contain;       
         background-position: center;
@@ -328,20 +333,23 @@ main {
         height: 100dvh;                
         padding: 20% 9% 9% 9%;
     }
-
+    /* Keeps the content in the little window of the retro-window image nice and centered/adjusts for a better reading experience */
    .content-row {
         flex-direction: column;
         align-items: center; 
     }
 }
 /* Tablet Device Sizing -- more comments to come */
+/* If the screen matches between these pixel sizes and is a vertical screen */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
     .retro-window {
+        /* Changes back to the original Img I used but with different settings */
         background-image: url("images/Profile_WindowVer2.png");
         width: 95vw;
         height: auto;
         padding: 8% 6% 6% 6%;
     }
+    /* Changes the content back to how it was originally organised (In a row) */
     .content-row {
         flex-direction: row;
     }
